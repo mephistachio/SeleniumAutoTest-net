@@ -18,27 +18,37 @@ namespace SeleniumPOTest
         {
             webDriver = new FirefoxDriver();
             webDriver.Navigate().GoToUrl("https://www.dnvgl.com/");
-            webDriver.FindElement(By.ClassName("the-header__login")).Click();
             webDriver.Manage().Window.Maximize();
-            //webDriver.Navigate().GoToUrl("https://www.veracity.com/auth/login");
+            
         }
                 
         [Test]
-        public void TestLogin()
+        public void TestSectorsList()
         {
-        HomePage ObjHomePage = new HomePage(webDriver);
-        Login ObjLoginPage = new Login(webDriver);
-        string LoginPageTitle = ObjLoginPage.LogIntoSys("mephistachio@gmail.com", "Qazxsw123");
-        Assert.AreEqual("Sign In", LoginPageTitle);
-        string homepageTitle = ObjHomePage.GetHomePageTitle();
-        Assert.AreEqual("Working...", homepageTitle);
-        new WebDriverWait(webDriver, TimeSpan.FromSeconds(3)).Until(x=>x.Url == "https://www.veracity.com/");
-        Assert.AreEqual("https://www.veracity.com/", webDriver.Url);
-        webDriver.Navigate().Back();
-        Assert.AreEqual("https://www.veracity.com/auth/oidc/loginreturn", webDriver.Url);
-            //Assert.AreEqual("Error", homepageTitle);
+        
          }
 
+        [Test]
+       
+        public void TestServisesDropDown()
+        {
+          
+        }
+
+        [Test]
+     
+        public void TestInsightsDropDown()
+        {
+
+        }
+
+
+        [Test]
+
+        public void TestAboutUsDropDown()
+        {
+
+        }
         public void BClose()
         {
         webDriver.Quit();

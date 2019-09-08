@@ -24,7 +24,8 @@ namespace SeleniumPOTest
         }
                 
         [Test]
-        public void Test()
+        //positive test
+        public void TestTopHeader()
         {
         HomePage ObjHomePage = new HomePage(webDriver);
         Login ObjLoginPage = new Login(webDriver);
@@ -39,6 +40,7 @@ namespace SeleniumPOTest
             //Assert.AreEqual("Error", homepageTitle);
          }
 
+        
         public void BClose()
         {
         webDriver.Quit();
