@@ -40,9 +40,8 @@ namespace SeleniumPOTest.Pages
                 return webDriver.FindElement(By.ClassName("search-field__btn"));
             }
         }
+                #endregion
 
-
-        #endregion
         #region Methods
         public string GetHomePageTitle()
         {
@@ -58,11 +57,8 @@ namespace SeleniumPOTest.Pages
            // SearchSbmtBtn.Click();
             var searchResults = webDriver.FindElements(By.TagName("article"));
             return searchResults;
-
-        }
+                    }
         #endregion
-
-
 
     }
 }

@@ -1,9 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace SeleniumPOTest.Pages
 {
@@ -40,7 +36,6 @@ namespace SeleniumPOTest.Pages
         #endregion
 
         #region Methods
-
         public string LogIntoSys(string username, string password)
         {
 
@@ -52,8 +47,6 @@ namespace SeleniumPOTest.Pages
 
         }
 
-
-
-
-    } }
+    }
+}
 #endregion
