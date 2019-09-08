@@ -30,11 +30,11 @@ namespace SeleniumPOTest
 
         string LoginPageTitle = ObjLoginPage.LogIntoSys("mephistachio@gmail.com", "Qazxsw123");
         Assert.AreEqual("Sign In", LoginPageTitle);
-            string homepageTitle = ObjHomePage.GetHomePageTitle();
-       Assert.AreEqual("Working...", homepageTitle);
-            //WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(30));
-            new WebDriverWait(webDriver, TimeSpan.FromSeconds(3)).Until(x=>x.Url == "https://www.veracity.com/");
-            Assert.AreEqual("https://www.veracity.com/", webDriver.Url);
+        string homepageTitle = ObjHomePage.GetHomePageTitle();
+        Assert.AreEqual("Working...", homepageTitle);
+           
+        new WebDriverWait(webDriver, TimeSpan.FromSeconds(3)).Until(x=>x.Url == "https://www.veracity.com/");
+        Assert.AreEqual("https://www.veracity.com/", webDriver.Url);
            
                 }
 

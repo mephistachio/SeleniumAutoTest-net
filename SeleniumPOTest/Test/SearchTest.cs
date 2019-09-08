@@ -21,7 +21,7 @@ namespace SeleniumPOTest.Test
         }
 
         [Test]
-
+        //positive
         public void SearchTestFF()
         {
             HomePage objSearch = new HomePage(webDriver);
@@ -29,9 +29,16 @@ namespace SeleniumPOTest.Test
             var searchResult = objSearch.SearchgBox("2019");
             Assert.AreEqual(5, searchResult.Count);
            
-            
+        }
+        [Test]
+        //negative test
+        public void SearchNegative()
+        {
+            HomePage objSearch = new HomePage(webDriver);
+            objSearch.SearchBtn.Click();
+            var searchResult = objSearch.SearchgBox("#@)!$0");
+            Assert.AreEqual(0, searchResult.Count);
 
-           
         }
     }
 }
