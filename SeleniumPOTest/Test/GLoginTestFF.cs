@@ -7,7 +7,7 @@ using System;
 
 namespace SeleniumPOTest
 {
-    public class TopHeaderTest
+    public class GLoginTestFF
     {
         IWebDriver webDriver;
        
